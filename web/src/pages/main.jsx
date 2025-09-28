@@ -8,6 +8,7 @@ import Device from "../assets/Device.json";
 import Import from "../assets/Import.json";
 import Export from "../assets/Export.json";
 import CustomCard from "./widgets/card";
+import Footer from "./widgets/footer";
 import { useTheme } from "@emotion/react";
 import { useNavigate } from "react-router-dom";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -32,7 +33,7 @@ const Main = ({ isDark, setIsDark }) => {
 
   useEffect(() => {
     if (cardsIsInView) {
-        cardsMainControls.start("visible");
+      cardsMainControls.start("visible");
     }
   }, [cardsIsInView]);
 
@@ -94,7 +95,7 @@ const Main = ({ isDark, setIsDark }) => {
       <div className="body-main">
         <div>
           <motion.div
-           ref={ref}
+            ref={ref}
             variants={{
               hidden: { opacity: 0, y: 75 },
               visible: { opacity: 1, y: 0 },
@@ -118,13 +119,13 @@ const Main = ({ isDark, setIsDark }) => {
               sx={{ color: "text.primary", borderColor: "text.primary" }}
               variant="outlined"
             >
-              Commencer mainteant
+              parcourir la bibliothèque
             </Button>
           </motion.div>
           <Lottie animationData={Network} className="network-animation" />
         </div>
         <motion.div
-        ref={cardsRef}
+          ref={cardsRef}
           variants={{
             hidden: { opacity: 0, y: 75 },
             visible: { opacity: 1, y: 0 },
@@ -146,6 +147,7 @@ const Main = ({ isDark, setIsDark }) => {
           })}
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };
