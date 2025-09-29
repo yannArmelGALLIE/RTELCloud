@@ -13,6 +13,9 @@
             width: 45px;
             height: 45px;
         }
+        & > a {
+            text-decoration: none;
+        }
     }
     & > div:nth-of-type(2) {
         display: flex;

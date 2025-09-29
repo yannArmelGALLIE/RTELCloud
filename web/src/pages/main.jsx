@@ -12,6 +12,7 @@ import Footer from "./widgets/footer";
 import { useTheme } from "@emotion/react";
 import { useNavigate } from "react-router-dom";
 import { motion, useAnimation, useInView } from "framer-motion";
+import logo from "../assets/logo.png"
 
 const Main = ({ isDark, setIsDark }) => {
   const Navigate = useNavigate();
@@ -62,7 +63,7 @@ const Main = ({ isDark, setIsDark }) => {
     <div className="main">
       <div className="navbar-main">
         <div>
-          <img src="./logo.png" alt="Logo" />
+          <img src={ logo } alt="Logo" />
           <h1>RTELCloud</h1>
         </div>
         <div>
